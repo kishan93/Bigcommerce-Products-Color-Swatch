@@ -62,6 +62,10 @@
                 window.stencilBootstrap("{{page_type}}", {{jsContext}}).load();
             }
         </script>
+        <script>
+            window.STENCIL_API_TOKEN = "{{settings.storefront_api.token}}"
+            window.STORE_HOST_PATH = "{{settings.request.host}}"
+        </script>
         <script async defer src="{{cdn 'assets/dist/theme-bundle.main.js' resourceHint='preload' as='script'}}" onload="onThemeBundleMain()"></script>
 
         {{{footer.scripts}}}
